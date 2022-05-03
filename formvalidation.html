@@ -12,35 +12,62 @@
     <form action="">
 
         <label for="userID">UserID:</label>
-        <input type="text" id="userID">
+        <input type="text" id="userID" minlength="5" maxlength="12" required>
+        <br>
         <br>
         <label for="password">Password:</label>
-        <input type="text" id="password">
+        <input type="text" id="password" minlength="7" maxlength="12" required>
+        <br>
+        <br>
         <br>
         <label for="name">Name:</label>
-        <input type="text" id="name">
+        <input type="text" id="name" pattern="[A-Za-z]{3-12}" required>
+        <br>
         <br>
         <label for="address">Address:</label>
         <input type="text" id="address">
         <br>
+        <br>
         <label for="country">Country:</label>
-        <input type="text" id="country">
+        <select name="country" id="country" required>
+            <option value="south africa">South Africa</option>
+            <option value="america">America</option>
+            <option value="new zeland">New Zeland</option>
+            <option value="canada">Canada</option>
+            <option value="russia">Russia</option>
+        </select>
+        <br>
         <br>
         <label for="zipcode">ZIPcode:</label>
-        <input type="text" id="zipcode">
+        <input type="number" id="zipcode" max="9999" required>
+        <br>
         <br>
         <label for="email">Email</label>
-        <input type="text" id="email">
+        <input type="email" id="email" required>
         <br>
-        <label for="sex">Sex:</label>
-        <input type="radio" id="sex">
         <br>
-        <label for="languages">Languages:</label>
-        <input type="checkbox" id="languages">
+        <p>Sex:</p>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="sex"value="female" required>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="sex" value="male" required>
         <br>
-        <label for="about">About:</label>
-        <input type="text" id="about">
         <br>
+        <p>Language:</p>
+        <label for="languages">English</label>
+        <input type="checkbox" id="language1" name="language1" value="English" required>
+        <label for="languages">Afrikaans</label>
+        <input type="checkbox" id="language2" name="language2" value="English"  required>
+        <label for="languages">Other</label>
+        <input type="checkbox" id="language3" name="language3" value="English" required>
+        <br>
+        <br>
+        <label for="about">About:</label><br>
+        <textarea name="About" rows="10" cols="30" id="about"></textarea>
+        <br>
+        <br>
+        <label for="submit"></label>
+        <input type="submit" id="submit">
     </form>
 </body>
 </html>
